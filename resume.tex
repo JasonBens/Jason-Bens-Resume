@@ -1,0 +1,124 @@
+\documentclass[a4paper, 10pt]{article}
+\usepackage[margin=0.15\textwidth]{geometry}
+\usepackage{url}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{multicol}
+
+% Boilerplate
+\title{Jason Bens - Resume}
+\author{Jason Bens}
+\date{May 20, 2014}
+
+% Remove indents - They look silly for this
+\setlength{\parindent}{0pt}
+
+% Remove section numbers - Meaningless without ToC
+\setcounter{secnumdepth}{0}
+
+% Remove page number - Handled explicitly
+\pagestyle{fancy}
+\fancyhf{}
+% Footer  
+\lfoot{\LaTeXe}
+\rfoot{\thepage/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt} % Remove top hrule, too
+\renewcommand{\footrulewidth}{1pt} % Remove top hrule, too
+
+
+% Personal Data
+\newcommand {\firstname} {Jason}
+\newcommand {\lastname} {Bens}
+\newcommand {\address} {
+  \mbox{1204 Yates Street}\\
+  \mbox{Victoria, BC}
+  \mbox{V8V 4V1}
+}
+\newcommand {\phone} {\mbox{1-403-845-9125}}
+\newcommand {\email} {\url{Jason.L.Bens@gmail.com}}
+\newcommand {\linkedin} {\url{linkedin.com/in/jasonbens}}
+\newcommand {\github} {\url{github.com/JasonBens}}
+
+\begin{document}
+
+% Header containing personal details
+% Multiple columns for header
+\begin{minipage}[t]{0.7\textwidth}
+  \begin{center}
+    {\Huge \firstname~\lastname}
+  \end{center}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+  \begin{flushright}
+    \phone \\
+    \address \\
+    \email \\
+    \linkedin \\
+    \github \\
+  \end{flushright}
+\end{minipage}
+
+% End of header containing personal details
+\hrulefill
+
+\section{Bio}
+I'm an electrical engineer interested in finding applications for deep learning in computer-science and engineering fields. I enjoy working with embedded systems and playing with microcontrollers. Eventually, I want to bridge the gap between humans, machines, and AI, and find ways to combine them to make something greater than the sum of its parts. In my off-time, I learn about whatever interests me through online courses such as those offered by Coursera or edX.
+% Experience section
+\section{Experience}
+  \begin{description}
+    \item[Research Intern]{
+    \hfill \\
+    \mbox{\textbf{Advanced Telecommunications Research Institute International}}
+    \hfill
+    \mbox{Kyoto, Japan}\\
+    \emph{June 2013 - August 2013} \\
+    Under the supervision of Dr. Yukiyasu Kamitani in the Department of Neuroinformatics, I performed research into machine learning, primarily focusing on the application of neural networks, especially deep learning architectures, to the decoding of object representations in the brain. Primarily, I worked on implementing a stacked denoising autoencoder in python using Theano to perform generic object recognition with the goal of using fMRI data to predict the neural response of a subject when presented with an image. 
+    }
+    \item[Research Intern]{
+    \hfill \\
+    \mbox{\textbf{Advanced Telecommunications Research Institute International}}
+    \hfill
+    \mbox{Kyoto, Japan}\\
+    \emph{July 2012 - April 2013} \\
+    Working under the supervision of Dr. Noriko Yamagishi and Dr. Matthew DeBrecht in the Department of Cognitive Neuroscience, we performed research into the mechanisms of visual attention, as well as neural plasticity. My primary duties were developing software using MATLAB to perform visual experiments, as well as pattern extraction using the resulting EEG, MEG, and fMRI data. Additional duties involved learning to use new software packages, and developing documentation and guides to perform routine data processing steps using these new packages.
+    }
+  \end{description}
+
+% Education Section
+\section{Education}
+  \begin{description}
+    \item[B.Eng in Electrical Engineering] \hfill University of Victoria\\
+    \emph{2012 - 2014}
+      \begin{itemize}
+        \item Designed a portable USB battery pack as a capstone project.
+        \item Took part in the UVic ECOSat team designing a small satellite for the Canadian Satellite Design Competition put on by Geocentrix.
+        \item Implemented an unsupervised image segmentation algorithm by Deng and Clausi using Markov Random Fields.
+        \item Designed a software-defined PSK31 transceiver using GNU Radio. 
+      \end{itemize}
+    \item[Diploma in Electronics Engineering Technology] \hfill Southern Alberta Institute of Technology\\
+    \emph{2009 - 2011}
+      \begin{itemize}
+        \item Designed a 20 MHz arbitrary signal generator as a capstone project.
+      \end{itemize}
+    \item[Massive Open Online Courses] \hfill
+      \begin{itemize}
+        \item Web Intelligence and Big Data
+        \item The Brain and Space
+      \end{itemize}
+  \end{description}
+
+\section{Skills}
+  \begin{multicols}{5}
+    C\\Python\\Matlab\\\LaTeX\\Git
+    \columnbreak\\
+    Spice\\Altium\\NI LabView\\
+    \columnbreak\\
+    Machine Learning\\Pattern Recognition\\Deep Learning\\Neural Networks
+    \columnbreak\\
+    about that?\\
+    \columnbreak\\
+    Working?\\
+    \columnbreak
+  \end{multicols}
+
+\end{document}
