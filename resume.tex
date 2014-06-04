@@ -1,9 +1,11 @@
-\documentclass[a4paper, 10pt]{article}
-\usepackage[margin=0.15\textwidth]{geometry}
+\documentclass[a4paper, 11pt]{article}
+\usepackage[margin=0.1\textwidth]{geometry}
 \usepackage{url}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
-\usepackage{multicol}
+\usepackage{mdwlist}
+\usepackage{setspace}
+\usepackage{enumitem}
 
 % Boilerplate
 \title{Jason Bens - Resume}
@@ -16,11 +18,14 @@
 % Remove section numbers - Meaningless without ToC
 \setcounter{secnumdepth}{0}
 
+% Reduce space between lines to increase information density
+\setstretch{0.8}
+
 % Remove page number - Handled explicitly
 \pagestyle{fancy}
 \fancyhf{}
 % Footer  
-\lfoot{\LaTeXe}
+\lfoot{\firstname~\lastname}
 \rfoot{\thepage/\pageref{LastPage}}
 \renewcommand{\headrulewidth}{0pt} % Remove top hrule, too
 \renewcommand{\footrulewidth}{1pt} % Remove top hrule, too
@@ -51,7 +56,6 @@
 \begin{minipage}{0.3\textwidth}
   \begin{flushright}
     \phone \\
-    \address \\
     \email \\
     \linkedin \\
     \github \\
@@ -61,19 +65,21 @@
 % End of header containing personal details
 \hrulefill
 
-\section{Biography}
+\section{\underline{Biography}}
 I'm an electrical engineer interested in finding applications for deep learning in computer-science and engineering fields. I enjoy working with embedded systems and playing with microcontrollers. Eventually, I want to bridge the gap between humans, machines, and AI, and find ways to combine them to make something greater than the sum of its parts. In my off-time, I follow my interests through online courses such as those offered by Coursera or edX.
 
 % Skill section
-\section{Skill Summary} 
-  \parbox{0.1\textwidth}{
+\section{\underline{Skill Summary}}
+  \parbox{0.16\textwidth}{
+    \textbf{Programming}\\
     C\\
     Python\\
     Matlab\\
     \LaTeX\\
     Git
-  } \hfill
-  \parbox{0.13\textwidth}{
+  }\hfill
+  \parbox{0.15\textwidth}{
+    \textbf{Tools}\\
     Ngspice\\
     Altium\\
     NI LabView\\
@@ -81,93 +87,110 @@ I'm an electrical engineer interested in finding applications for deep learning 
     AutoCAD
   } \hfill
   \parbox{0.25\textwidth}{
+    \textbf{Competencies}\\
     Schematic Capture\\
     PCB Fabrication\\
-    Embedded Software Design\\
+    Embedded Systems\\
     Firmware Development\\
     Analog/Digital Design
   } \hfill
   \parbox{0.25\textwidth}{
+    \bigskip
     Machine Learning\\
     Pattern Recognition\\
     Deep Learning\\
     Neural Networks\\
     Medical Image Processing
   } \hfill
-  
 % Experience section
-\section{Experience}
-  \begin{description}
-    \item[Research Intern]{
-    \hfill \\
-    \mbox{\textbf{Advanced Telecommunications Research Institute International}}
-    \hfill
-    \mbox{Kyoto, Japan}\\
-    \emph{June 2013 - August 2013} \\
-    Under the supervision of Dr. Yukiyasu Kamitani in the Department of Neuroinformatics, I performed research into machine learning, primarily focusing on the application of neural networks, especially deep learning architectures, to the decoding of object representations in the brain. Primarily, I worked on implementing a stacked denoising autoencoder in python using Theano to perform generic object recognition with the goal of using fMRI data to predict the neural response of a subject when presented with an image. 
-    }
-    \item[Research Intern]{
-    \hfill \\
-    \mbox{\textbf{Advanced Telecommunications Research Institute International}}
-    \hfill
-    \mbox{Kyoto, Japan}\\
-    \emph{July 2012 - April 2013} \\
-    Working under the supervision of Dr. Noriko Yamagishi and Dr. Matthew DeBrecht in the Department of Cognitive Neuroscience, we performed research into the mechanisms of visual attention, as well as neural plasticity. My primary duties were developing software using MATLAB to perform visual experiments, as well as pattern extraction using the resulting EEG, MEG, and fMRI data. Additional duties involved learning to use new software packages, and developing documentation and guides to perform routine data processing steps using these new packages.
-    }
-  \end{description}
+\section{\underline{Experience}}
+  \textbf{Research Intern - Department of Neuroinformatics}
+  \hfill
+  Kyoto, Japan \\
+  \textbf{Advanced Telecommunications Research Institute International}
+  \hfill
+  \emph{June 2013 - August 2013}
+  \begin{itemize*}
+    \item Researched application of deep learning to fMRI for decoding object representations in the brain.
+    \item Implemented a stacked denoising autoencoder using Theano, a Python module for symbolic optimization of multi-dimensional math.
+    \item Applied denoising autoencoder to generic object decoding in preparation for further experiments.
+  \end{itemize*}
+  \textbf{Research Intern - Department of Cognitive Neuroscience}
+  \hfill
+  Kyoto, Japan\\
+  \textbf{Advanced Telecommunications Research Institute International}
+  \hfill
+  \emph{July 2012 - April 2013}
+  \begin{itemize*}
+    \item Developed visual attention and neuroplasticity experiments using MATLAB, psychophysical stimulus generators, and EEG data capture software.
+    \item Preprocessed fMRI data to allow longitudinal and cross-sectional analysis of data.
+    \item Extracted patterns from fMRI, EEG, MEG, and behavioural experiment data.
+    \item Built classifiers from experimental data to predict spatial attention.
+  \end{itemize*}
+  \textbf{Lab Supervisor}
+  \hfill
+  Calgary, Alberta\\
+  \textbf{Southern Alberta Institute of Technology}
+  \hfill
+  \emph{September 2010 - May 2011}
+  \begin{itemize*}
+    \item Supervised Electrical Engineering Technology lab during open lab hours
+    \item Helped first-year students with unfinished labwork.
+  \end{itemize*}
+
 
 % Education Section
-\section{Education}
-  \begin{description}
-    \item[B.Eng in Electrical Engineering] \hfill University of Victoria\\
-    \emph{2012 -  August 2014}
-      \begin{itemize}
-        \item Designed a portable USB battery pack as a capstone project.
-        \item Took part in the UVic ECOSat team designing a small satellite for the Canadian Satellite Design Competition put on by Geocentrix.
-        \item Part of the Microprocessor Group programming club.
-        \item Implemented an unsupervised image segmentation algorithm by Deng and Clausi using Markov Random Fields.
-        \item Designed a software-defined PSK31 transceiver using GNU Radio. 
-      \end{itemize}
+\section{\underline{Education}}
+  \begin{description}[leftmargin=0pt]
+    \begin{samepage}
+      \item[B.Eng in Electrical Engineering] \hfill University of Victoria\\
+      \emph{2012 -  August 2014}
+    \end{samepage}
     \begin{samepage}
     \item[Diploma in Electronics Engineering Technology] \hfill Southern Alberta Institute of Technology\\
     \emph{2009 - 2011}
-      \begin{itemize}
-        \item Designed a 20 MHz arbitrary signal generator as a capstone project.
-      \end{itemize}
+    \begin{itemize*}
+      \item Graduated in the Dean's List
+    \end{itemize*}
     \end{samepage}
     \item[Massive Open Online Courses] \hfill
-      \begin{itemize}
+      \begin{itemize*}
         \item Web Intelligence and Big Data
         \item The Brain and Space
-      \end{itemize}
+      \end{itemize*}
   \end{description}
   
-\section{Affiliations}
-  \begin{itemize}
-    \item ASET (Past Member)
-  \end{itemize}
+\section{\underline{Projects}}
+  \begin{itemize*}
+        \item Designed a portable USB battery pack as a capstone project at the University of Victoria.
+        \item Designed a 20 MHz arbitrary signal generator as a capstone project at SAIT.
+        \item Implemented an unsupervised image segmentation algorithm by Deng and Clausi using Markov Random Fields.
+        \item Developed a software-defined PSK31 transceiver using GNU Radio. 
+        \item Planned a satellite tracking and communication ground station with UVic ECOSat team as part of the Canadian Satellite Design Competition.
+  \end{itemize*}
   
-\section{Extracurricular Activities}
-  \begin{description}
+\section{\underline{Extracurricular Activities}}
+  \begin{description}[leftmargin=0pt]
     \item[ATR Machine Learning Club] \hfill
-      \begin{itemize}
+      \begin{itemize*}
         \item Read journal articles about recent developments in the machine learning field.
-        \item Present recent journal articles in front of colleagues at ATR (Advanced Telecommunications Research Institute International).
-      \end{itemize}
-    \item[Language Acquisition] \hfill
-      \begin{itemize}
-        \item Received private tutoring in Japanese for one year
-        \item Self-directed study in Mandarin Chinese
-      \end{itemize}
+        \item Present recent journal articles to colleagues at ATR (Advanced Telecommunications Research Institute International).
+      \end{itemize*}
     \item[Microprocessor Group] \hfill
-      \begin{itemize}
-        \item Build Engenuics embedded microcontroller kit
-        \item Develop hardware drivers for peripherals
-      \end{itemize}
-    \item[ECOSat] \hfill
-      \begin{itemize}
-        \item Develop initial design for satellite communication and tracking ground station
-      \end{itemize}
+      \begin{itemize*}
+        \item Build Engenuics embedded microcontroller kit.
+        \item Develop hardware drivers for peripherals.
+      \end{itemize*}
+    \item[Language Learning] \hfill
+      \begin{itemize*}
+        \item Received private lessons in Japanese for one year.
+        \item Self-directed study in Mandarin Chinese.
+      \end{itemize*}
   \end{description}
+    
+\section{\underline{Affiliations}}
+  \begin{itemize*}
+    \item ASET (Past Member)
+  \end{itemize*}
 
 \end{document}
