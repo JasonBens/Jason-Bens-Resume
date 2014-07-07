@@ -6,6 +6,7 @@
 \usepackage{mdwlist}
 \usepackage{setspace}
 \usepackage{enumitem}
+\usepackage{graphicx}
 
 % Boilerplate
 \title{Jason Bens - Resume}
@@ -17,9 +18,6 @@
 
 % Remove section numbers - Meaningless without ToC
 \setcounter{secnumdepth}{0}
-
-% Reduce space between lines to increase information density
-\setstretch{0.8}
 
 % Remove page number - Handled explicitly
 \pagestyle{fancy}
@@ -43,24 +41,35 @@
 \newcommand {\email} {\url{Jason.L.Bens@gmail.com}}
 \newcommand {\linkedin} {\url{linkedin.com/in/jasonbens}}
 \newcommand {\github} {\url{github.com/JasonBens}}
+\newcommand {\careers} {\url{careers.stackoverflow.com/JasonBens}}
 
 \begin{document}
 
+\setstretch{0.8}
+
+
+% Reduce space between lines to increase information density
+\setstretch{0.8}
 % Header containing personal details
 % Multiple columns for header
-\begin{minipage}[t]{0.7\textwidth}
-  \begin{center}
+\begin{minipage}[t]{0.4\textwidth}  
+  \begin{flushright}
     {\Huge \firstname~\lastname}
-  \end{center}
-\end{minipage}\hfill
-\begin{minipage}{0.3\textwidth}
+  \end{flushright}
+\end{minipage}
+\hfill
+\begin{minipage}{0.42\textwidth}
   \begin{flushright}
     \phone \\
     \email \\
     \linkedin \\
     \github \\
+    \careers \\
   \end{flushright}
 \end{minipage}
+%\begin{minipage}{0.12\textwidth}
+%  \includegraphics[width=\textwidth]{logo}
+%\end{minipage}
 
 % End of header containing personal details
 \hrulefill
@@ -74,7 +83,7 @@ I'm an electrical engineer interested in finding applications for deep learning 
     \textbf{Programming}\\
     C/C++\\
     Python\\
-    Matlab\\
+    Matlab/Octave\\
     \LaTeX
   } 
   \parbox{0.18\textwidth}{
@@ -202,7 +211,7 @@ I'm an electrical engineer interested in finding applications for deep learning 
   \emph{Graduating August 2014}
   \begin{itemize}[nosep]
     \item Specialization in Computational Intelligence
-    \item Specialization Electromagnetics and Photonics
+    \item Specialization in Electromagnetics and Photonics
   \end{itemize}
   \medskip
   
@@ -267,10 +276,10 @@ I'm an electrical engineer interested in finding applications for deep learning 
   \end{itemize}
   \medskip
       
-  \textbf{Microprocessor Group}
+  \textbf{Engenuics Microprocessor Group}
   \begin{itemize}[nosep]
-    \item Built Engenuics embedded microcontroller kit.
     \item Developed hardware drivers for peripherals.
+    \item Developed simple pong game using a barebones real-time OS.
   \end{itemize}
   \medskip
       
