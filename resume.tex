@@ -7,11 +7,12 @@
 \usepackage{setspace}
 \usepackage{enumitem}
 \usepackage{graphicx}
+\usepackage{tabularx}
 
 % Boilerplate
 \title{Jason Bens - Resume}
 \author{Jason Bens}
-\date{May 20, 2014}
+\date{May 13, 2019}
 
 % Remove indents - They look silly for this
 \setlength{\parindent}{0pt}
@@ -32,7 +33,7 @@
 % Personal Data
 \newcommand {\firstname} {Jason}
 \newcommand {\lastname} {Bens}
-\newcommand {\address} {3-219 1160 N 192nd St, Shoreline, WA}
+\newcommand {\address} {390 La Strada Drive, San Jose, CA}
 \newcommand {\phone} {\mbox{1-403-845-9125}}
 \newcommand {\email} {\url{Jason.L.Bens@gmail.com}}
 \newcommand {\linkedin} {\url{linkedin.com/in/jasonbens}}
@@ -61,7 +62,7 @@
     \email \\
     \linkedin \\
     \github \\
-    \careers \\
+    % \careers \\
   \end{flushright}
 \end{minipage}
 %\begin{minipage}{0.12\textwidth}
@@ -72,141 +73,45 @@
 \hrulefill
 
 \section{\underline{Biography}}
-I'm an electrical engineer interested in finding applications for deep learning in computer science and engineering fields. I enjoy working with embedded systems and playing with microcontrollers. Eventually, I want to bridge the gap between humans, machines, and AI, and find ways to combine them to make something greater than the sum of its parts. In my off-time, I follow my interests through online courses such as those offered by Coursera or edX.
+I'm an electrical engineer who loves the dynamic nature and fast pace of product design. My favourite projects are those that allow me to learn a new technology and apply it in an unusual way.
 
 % Skill section
 \section{\underline{Skill Summary}}
-  \parbox{0.16\textwidth}{
-    \textbf{Programming}\par   
-    C/C++\par
-    Python\par
-    \LaTeX\par
-  } 
-  \parbox{0.18\textwidth}{
-    \bigskip
-    Matlab/Octave\par
-    ARM Assembly\par    
-	\hfill\par    
-  }
-  \parbox{0.23\textwidth}{
-    \textbf{Tools}\par
-    Altium\par
-    NI LabView\par
-    SolidWorks Electrical\par
-  }
-  \parbox{0.14\textwidth}{
-    \bigskip
-    AutoCAD\par
-    SPICE\par
-    \hfill\par
-  }
-  \parbox{0.15\textwidth}{
-    \textbf{Technologies}\par
-    I\textsuperscript{2}C\par
-    SPI\par
-    ARM\par
-  }
-  \medskip
+  \begin{tabularx}{\textwidth}{l l l l}
+    \textbf{Competencies} &  & \textbf{Programming} & \textbf{Tools}\\
+    Schematic Capture & Test Automation & C/C++ & Altium\\
+    PCB Layout/Fab & Prototyping and Test & Python & Allegro/Orcad\\
+    Analog/Digital Design & Soldering and Rework & \LaTeX & Spice\\
+    Electromagnetic Compliance & Circuit Simulation & ARM Assembly & NI LabView\\
+  \end{tabularx}
   
-  \parbox{0.23\textwidth}{
-    \textbf{Competencies}\par
-    Analog Design\par
-    Digital Design\par
-    Mixed Signal Design\par
-    Schematic Capture\par
-    PCB Layout/Fab\par
-  }
-  \parbox{0.26\textwidth}{
-    \bigskip
-    Embedded System Design\par
-    Firmware Development\par
-    Footprint Definition\par
-    Soldering and Rework\par
-    GPIB Test Automation\par
-  }
-  \parbox{0.21\textwidth}{
-    \bigskip
-    Prototyping\par
-    Low Power Design\par
-    Battery Systems\par
-    Lab Instrumentation\par
-    DSP\par
-    }
-  \parbox{0.25\textwidth}{
-    \bigskip
-    Machine Learning\par
-    Pattern Recognition\par
-    Deep Learning\par
-    Neural Networks\par
-    Medical Image Processing\par
-  }
- 
 % Experience section
 \section{\underline{Experience}}
+  \textbf{Electrical Engineer}
+  \hfill
+  Seattle, Washington \\
+  \textbf{Pensar Development}
+  \hfill
+  \emph{August 2015 - September 2018}
+  \begin{itemize}[nosep]
+    \item Designed several iterations of a USB hub PCB for a medical ultrasound device to meet client requirements.
+    \item Spearheaded the EMC effort to reduce RF emissions from a medical ultrasound device below IEC-60601-1 emissions requirements.
+    \item Validated boards against requirements and design intent, and found the root cause of any failures.
+  \end{itemize}
+  \bigskip
+  
   \textbf{Electrical Engineer}
   \hfill
   Mukilteo, Washington \\
   \textbf{Electroimpact}
   \hfill
-  \emph{September 2014 - Present}
+  \emph{September 2014 - August 2015}
   \begin{itemize}[nosep]
     \item Engaged in all phases of the product lifecycle management of aircraft assembly automation equipment for leading aerospace manufacturers such as Boeing.
     \item Acted as a key point of contact during on-site functional testing and support.
     \item Developed electrical subsystems of larger assemblies to contract specifications and in compliance with national codes.
   \end{itemize}
-  \medskip
-  
-  \textbf{Electrical Engineer}
-  \hfill
-  Seattle, Washington \\
-  \textbf{Fensens}
-  \hfill
-  \emph{April 2015 - Present}
-  \begin{itemize}[nosep]
-    \item Ongoing development of a battery-powered bluetooth-enabled vehicle parking sensor
-    \item Designed, prototyped, and evaluated ultrasonic transducer transceiver and driver circuitry.
-  \end{itemize}
-  \medskip
-  
-  \textbf{Research Intern - Department of Neuroinformatics}
-  \hfill
-  Kyoto, Japan \\
-  \textbf{Advanced Telecommunications Research Institute International}
-  \hfill
-  \emph{June 2013 - August 2013}
-  \begin{itemize}[nosep]
-    \item Researched application of deep learning to fMRI for decoding object representations in the brain.
-    \item Implemented a stacked denoising autoencoder using Theano, a Python module for symbolic optimization of multi-dimensional math.
-  \end{itemize}
-  \medskip
-  
-  \textbf{Research Intern - Department of Cognitive Neuroscience}
-  \hfill
-  Kyoto, Japan\\
-  \textbf{Advanced Telecommunications Research Institute International}
-  \hfill
-  \emph{July 2012 - April 2013}
-  \begin{itemize}[nosep]
-    \item Developed visual attention and neuroplasticity experiments using MATLAB, psychophysical stimulus generators, and EEG data capture software.
-    \item Preprocessed fMRI data to allow longitudinal and cross-sectional analysis of data.
-    \item Extracted patterns from fMRI, EEG, MEG, and behavioural experiment data.
-    \item Built classifiers from experimental data to predict spatial attention.
-  \end{itemize}
-  \medskip
 
-  \textbf{Communications Technician}
-  \hfill
-  Rocky Mountain House, Alberta \\
-  \textbf{Oras Communications}
-  \hfill
-  \emph{June 2006 - August 2009}
-  \begin{itemize}[nosep]
-  \item Installed 2-way radios, cellular handsfree kits, and other communication equipment into vehicles.
-  \item Maintained vehicle-mounted communication and safety equipment.
-  \item Diagnosed and repaired non-compliant equipment.
-  \end{itemize}  
-
-\newpage
 % Education Section
 \section{\underline{Education}}
   \textbf{Bachelor of Engineering in Electrical Engineering}
@@ -214,12 +119,11 @@ I'm an electrical engineer interested in finding applications for deep learning 
   University of Victoria\\
   GPA: 7.58/9.00
   \hfill
-  \emph{Graduating August 2014}
+  \emph{Graduated 2014}
   \begin{itemize}[nosep]
-    \item Specialization in Computational Intelligence
-    \item Specialization in Electromagnetics and Photonics
+    \item Specializations in Computational Intelligence and Electromagnetics \& Photonics
   \end{itemize}
-  \medskip
+  \bigskip
   
   \textbf{Diploma in Electronics Engineering Technology}
   \hfill
@@ -230,74 +134,20 @@ I'm an electrical engineer interested in finding applications for deep learning 
   \begin{itemize}[nosep]
     \item Graduated with Honours.
   \end{itemize}
-  \medskip
-  
-  \textbf{Massively Open Online Courses}
-  \begin{itemize}[nosep]
-    \item Web Intelligence and Big Data
-    \item The Brain and Space
-    \item Machine Learning
-  \end{itemize}
   
 \section{\underline{Projects}}
-  \textbf{Automated Fiber Placement}
+  \textbf{Medical Ultrasound Device}
+  \begin{itemize}[nosep]
+    \item Designed USB 3.0 and USB 2.0 hub boards, emphasizing signal integrity due to electrically noisy environment.
+    \item Exhaustively investigated cause of EMC failures, culminating in several modifications and the addition of an inline power filter.
+    \item Instrumented hub boards for automated testing with Labview/NI Teststand.
+  \end{itemize}
+  \bigskip
+  
+  \textbf{Automated Fiber Placement Machine}
   \begin{itemize}[nosep]
     \item Developed sensor system for monitoring safety brakes along multiple axes of motion.
     \item Interfaced CNC with various devices for realtime monitoring and control of mobile gantry for carbon fiber placement.
     \item Designed 24V, 120V, 208V, and 480V AC and DC power distribution systems.
   \end{itemize}
-  \medskip
-
-  \textbf{Vertical Panel Assembly Line}
-  \begin{itemize}[nosep]
-    \item Assembled fixtures for vertical loading and riveting of aircraft wing skins to horizontal support ribs.
-    \item Planned and enacted retrofits to new and existing equipment to meet required specifications.
-    \item Designed a covered cable management system for protecting exposed cable runs between equipment.
-  \end{itemize}
-  \medskip
-
-  \textbf{Portable USB Battery Pack}
-  \begin{itemize}[nosep]
-    \item Designed a portable USB-charged battery pack to recharge USB devices.
-    \item Implemented using high capacity lithium-polymer cells.
-    \item Capable of 5-volt, 2-amp USB output.
-  \end{itemize}
-  \medskip
-  
-  \textbf{ECOsat}
-  \begin{itemize}[nosep]
-    \item Joined University of Victoria's ECOsat team to take part in the Canadian Satellite Design Competition.
-    \item Planned a satellite tracking and communication ground station.
-  \end{itemize}
-  
-\section{\underline{Activities}}
-  \textbf{ATR Machine Learning Club}
-  \begin{itemize}[nosep]
-    \item Discussed journal articles about recent developments in the machine learning field.
-    \item Presented recent journal articles to colleagues at ATR (Advanced Telecommunications Research Institute International).
-  \end{itemize}
-  \medskip
-      
-  \textbf{Engenuics Microprocessor Group}
-  \begin{itemize}[nosep]
-    \item Developed hardware drivers for peripherals.
-    \item Developed simple pong game using a barebones real-time OS.
-  \end{itemize}
-  \medskip
-      
-  \textbf{Language Learning}
-  \begin{itemize}[nosep]
-    \item Enrolled in private lessons in Japanese for one year.
-    \item Self-directed study of Mandarin Chinese.
-  \end{itemize}
-
-\section{\underline{Certifications}}
-  \textbf{Canadian Amateur Radio Operator Certificate}
-  \hfill
-  \emph{VE7SBX}
-  \begin{itemize}[nosep]
-    \item Basic with Honours.
-    \item Advanced.
-  \end{itemize}
-
 \end{document}
