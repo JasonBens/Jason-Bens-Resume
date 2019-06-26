@@ -34,16 +34,12 @@
 \newcommand {\firstname} {Jason}
 \newcommand {\lastname} {Bens}
 \newcommand {\address} {390 La Strada Drive, San Jose, CA}
-\newcommand {\phone} {\mbox{1-403-845-9125}}
 \newcommand {\email} {\url{Jason.L.Bens@gmail.com}}
 \newcommand {\linkedin} {\url{linkedin.com/in/jasonbens}}
 \newcommand {\github} {\url{github.com/JasonBens}}
 \newcommand {\careers} {\url{careers.stackoverflow.com/JasonBens}}
 
 \begin{document}
-
-\setstretch{0.8}
-
 
 % Reduce space between lines to increase information density
 \setstretch{0.8}
@@ -73,7 +69,7 @@
 \hrulefill
 
 \section{\underline{Biography}}
-I'm a consumer/medical hardware engineer who loves the and fast pace and constant change of product design. I like learning new technologies and applying them in unusual ways.  My favourite projects are those that take me from initial conception through to production release.
+I am a hardware engineer who loves the fast pace and constant change of product design. I like learning new technologies and applying them in novel ways.  I have experience in all stages of the product design pipeline, including hardware design, design validation, regulatory/safety compliance including EMC, and contract manufacturer management.
 
 % Skill section
 \section{\underline{Skill Summary}}
@@ -84,68 +80,51 @@ I'm a consumer/medical hardware engineer who loves the and fast pace and constan
     High Speed Design & High Density Design & Root Cause Analysis & Contract Manuf. Management\\[5pt]
     \textbf{Tools} &  &  &\\
     Allegro/OrCAD & Altium & LTSpice/NgSpice & NI LabView\\
-    C & Python & MATLAB & ARM Assembly\\
+    C & Python & MATLAB & ARM Assembly
   \end{tabularx}
-  
+
 % Experience section
 \section{\underline{Experience}}
-  \textbf{Electrical Engineer}
-  \hfill
-  Seattle, Washington \\
-  \textbf{Pensar Development}
-  \hfill
-  \emph{August 2015 - September 2018}
+  \textbf{Electrical Engineer}\hfill Seattle, Washington\\
+  \textbf{Pensar Development}\hfill \emph{August 2015 - September 2018}\smallskip
   \begin{itemize}[nosep]
-    \item Designed several USB 2.0/3.0 hub boards for a medical ultrasound device, working with local fab labs and larger CMs to bring it to production.
-    \item Spearheaded the EMC effort to reduce the device's RF emissions from 30 dB above the IEC-60601-1 limit to 15 dB below the limit.
+    \item Designed several USB 2.0 and USB 3.0 hub boards for a medical ultrasound device with emphasis on specialized galvanic isolation for patient safety.
+    \item Spearheaded the EMC effort to reduce the device's RF emissions from 30 dB above the IEC-60601-1 limit to 15 dB below the limit using both electrical and mechanical modifications.
+    \item Working with the firmware team, instrumented the USB hub board and created an automated manufacturing test suite for it in NI LabView.
+    \item Coordinated with local fabrication labs and larger contract manufacturers to prototype the device and bring it into production.
     \item Performed signal integrity measurements on high speed lines (DDR, USB 3.0, low MHz sine wave) and designed mitigations to reduce the effects of nearby RF coupling.
   \end{itemize}
-  \bigskip
+  \medskip
   
-  \textbf{Electrical Engineer}
-  \hfill
-  Mukilteo, Washington \\
-  \textbf{Electroimpact}
-  \hfill
-  \emph{September 2014 - August 2015}
+  \textbf{Electrical Engineer}\hfill Mukilteo, Washington\\
+  \textbf{Electroimpact}\hfill \emph{September 2014 - August 2015}\smallskip
   \begin{itemize}[nosep]
-    \item Engaged in all phases of the product lifecycle management of aircraft assembly automation equipment for leading aerospace manufacturers such as Boeing.
-    \item Acted as a key point of contact during on-site functional testing and support.
+    \item Designed a sensor system to monitor the safety brakes on a carbon fiber placement gantry used in construction of the Boeing 747.
+    \item  Integrated a positional control system with sensors for realtime control of a mobile gantry for carbon fiber placement.
+    \item Supervised the installation of automated assembly jigs for aircraft wing assembly lines.
+    \item Designed 24V, 120V, 208V, and 480V AC and DC power distribution systems.
+  \end{itemize}
+  \medskip    
+   
+  \textbf{Research Intern} \hfill Keihanna Science City, Kyoto, Japan \\
+  \textbf{Advanced Telecommunications Research Institute International} \hfill \emph{July 2012 - August 2013}\smallskip
+  \begin{itemize}[nosep]
+%    \item Supported several neuroscience projects related to spatial attention and dream decoding.
+    \item Applied stacked denoising autoencoders to generate hypothetical functional MRI (fMRI) activations.
+    \item Developed stimulus routines to collect data on behavioural tasks from human test subjects.
+    \item Analyzed fMRI, MEG, EEG, and anatomical MRI data to locate and visualize neural activations measured during experiments.
   \end{itemize}
 
 % Education Section
 \section{\underline{Education}}
-  \textbf{Bachelor of Engineering in Electrical Engineering}
-  \hfill
-  University of Victoria\\
-  GPA: 7.58/9.00
-  \hfill
-  \emph{Graduated 2014}
+  \textbf{Bachelor of Engineering in Electrical Engineering}\hfill University of Victoria\\
+  GPA: 7.58/9.00\hfill\emph{Graduated 2014}\smallskip
   \begin{itemize}[nosep]
     \item Specializations in Computational Intelligence and Electromagnetics \& Photonics
   \end{itemize}
-  \bigskip
+  \medskip
   
-  \textbf{Diploma in Electronics Engineering Technology}
-  \hfill
-  Southern Alberta Institute of Technology
-  GPA: 3.82/4.00 with Honours
-  \hfill
-  \emph{Graduated 2011}
+  \textbf{Diploma in Electronics Engineering Technology}\hfill Southern Alberta Institute of Technology\\
+  GPA: 3.82/4.00 with Honours\hfill\emph{Graduated 2011}\smallskip
   
-\section{\underline{Projects}}
-  \textbf{Medical Ultrasound Device}
-  \begin{itemize}[nosep]
-    \item Designed USB 3.0 and USB 2.0 hub boards, emphasizing signal integrity due to electrically noisy environment.
-    \item Exhaustively investigated cause of EMC failures, culminating in several modifications and the addition of an inline power filter.
-    \item Instrumented hub boards for automated testing with Labview/NI Teststand.
-  \end{itemize}
-  \bigskip
-  
-  \textbf{Automated Fiber Placement Machine}
-  \begin{itemize}[nosep]
-    \item Developed sensor system for monitoring safety brakes along multiple axes of motion.
-    \item Interfaced CNC with various devices for realtime monitoring and control of mobile gantry for carbon fiber placement.
-    \item Designed 24V, 120V, 208V, and 480V AC and DC power distribution systems.
-  \end{itemize}
 \end{document}
