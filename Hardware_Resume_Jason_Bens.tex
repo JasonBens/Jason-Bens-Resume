@@ -7,18 +7,21 @@
 \usepackage{setspace}
 \usepackage{enumitem}
 \usepackage{graphicx}
-\usepackage{tabularx}
+\usepackage{titlesec}
 
 % Boilerplate
 \title{Jason Bens - Resume}
 \author{Jason Bens}
-\date{May 13, 2019}
+\date{Jan 20, 2021}
 
 % Remove indents - They look silly for this
 \setlength{\parindent}{0pt}
 
 % Remove section numbers - Meaningless without ToC
 \setcounter{secnumdepth}{0}
+
+% Tweak subsection spacing to optimize page breaks
+\titlespacing\subsection{0pt}{6pt plus 2pt minus 2pt}{2pt plus 2pt minus 2pt}
 
 % Remove page number - Handled explicitly
 \pagestyle{fancy}
@@ -42,7 +45,7 @@
 \begin{document}
 
 % Reduce space between lines to increase information density
-\setstretch{0.8}
+\setstretch{0.95}
 % Header containing personal details
 % Multiple columns for header
 \begin{minipage}[t]{0.4\textwidth}  
@@ -69,28 +72,39 @@
 \hrulefill
 
 \section{\underline{Biography}}
-I am a hardware engineer who loves the fast pace and constant change of product design. I like learning new technologies and applying them in novel ways.  I have experience in all stages of the product design pipeline, including hardware design, design validation, regulatory/safety compliance including EMC, and contract manufacturer management.
+I'm a hardware engineer at Loon, previously part of Google X.  I've been designing hardware for the past six years, but I'm also interested in and have experience in software and firmware development.  I'll be relocating with my family to Berlin in April, and intend to take a position working on both firmware and hardware.
 
 % Skill section
 \section{\underline{Skill Summary}}
-  \begin{tabularx}{\textwidth}{l l l l}
-    \textbf{Competencies} &  &  &\\
+  \subsection{\textbf{Competencies}}
+  \begin{tabular}{l l l l}
     Schematic Capture & PCB Design/Layout & Analog/Digital Design & Electromagnetic Compliance\\
     System Integration & Circuit Simulation & Prototyping and Test & Signal Integrity Validation\\
-    High Speed Design & High Density Design & Root Cause Analysis & Contract Manuf. Management\\[5pt]
-    \textbf{Tools} &  &  &\\
+    High Speed Design & High Density Design & Root Cause Analysis & Contract Manuf. Management\\
+  \end{tabular}
+  \subsection{\textbf{Tools}}
+  \begin{tabular}{l l l l}
     Allegro/OrCAD & Altium & LTSpice/NgSpice & NI LabView\\
-    C & Python & MATLAB & ARM Assembly
-  \end{tabularx}
+    C/C++ & Python & MATLAB & ARM Assembly
+  \end{tabular}
 
 % Experience section
-\section{\underline{Experience}}
+\section{\underline{Hardware Experience}}
+  \textbf{Hardware Engineer}\hfill Mountain View, California\\
+  \textbf{Google X, Loon LLC}\hfill \emph{January 2020 - Current}\smallskip
+  \begin{itemize}[nosep]
+    \item As the main avionics engineer on Loon's next generation of flight vehicle, defined the requirements of, designed, and implemented a new avionics platform, launching Q1 2021 (Phase 1).
+    \item Designed from scratch a new sensor fusion board for real-time flight data acquisition and controller actuation, forming the backbone of the next-gen flight vehicle's control system.
+    \item Refactored an existing ballast dispenser board to simplify the design, removing or modifying several unnecessary power supplies and peripherals.
+    \item Helped keep Loon weird by sneaking cat-themed art onto new circuit boards.
+  \end{itemize}
+  \medskip
+  
   \textbf{Electrical Engineer}\hfill Seattle, Washington\\
   \textbf{Pensar Development}\hfill \emph{August 2015 - September 2018}\smallskip
   \begin{itemize}[nosep]
-    \item Designed several USB 2.0 and USB 3.0 hub boards for a medical ultrasound device with emphasis on specialized galvanic isolation for patient safety.
+    \item Designed the schematics and circuit-board layout of several USB 2.0 and USB 3.0 hub boards for a medical ultrasound device.
     \item Spearheaded the EMC effort to reduce the device's RF emissions from 30 dB above the IEC-60601-1 limit to 15 dB below the limit using both electrical and mechanical modifications.
-    \item Working with the firmware team, instrumented the USB hub board and created an automated manufacturing test suite for it in NI LabView.
     \item Coordinated with local fabrication labs and larger contract manufacturers to prototype the device and bring it into production.
     \item Performed signal integrity measurements on high speed lines (DDR, USB 3.0, low MHz sine wave) and designed mitigations to reduce the effects of nearby RF coupling.
   \end{itemize}
@@ -99,20 +113,33 @@ I am a hardware engineer who loves the fast pace and constant change of product 
   \textbf{Electrical Engineer}\hfill Mukilteo, Washington\\
   \textbf{Electroimpact}\hfill \emph{September 2014 - August 2015}\smallskip
   \begin{itemize}[nosep]
-    \item Designed a sensor system to monitor the safety brakes on a carbon fiber placement gantry used in construction of the Boeing 747.
-    \item  Integrated a positional control system with sensors for realtime control of a mobile gantry for carbon fiber placement.
-    \item Supervised the installation of automated assembly jigs for aircraft wing assembly lines.
-    \item Designed 24V, 120V, 208V, and 480V AC and DC power distribution systems.
+    \item Designed a sensor system to monitor the safety brakes on a carbon fiber placement gantry used in the construction of the Boeing 747.
+    \item Integrated a positional control system with sensors for real-time control of a mobile gantry for carbon fiber placement.
   \end{itemize}
-  \medskip    
-   
+  \medbreak
+  
+\section{\underline{Software Experience}}
+  \textbf{Electrical Engineer}\hfill Seattle, Washington\\
+  \textbf{Pensar Development}\hfill \emph{August 2015 - September 2018}\smallskip
+  \begin{itemize}[nosep]
+    \item Wrote several python utility scripts for firmware updates, log scraping, and reporting on prototype devices under development.
+    \item Developed a suite of automated manufacturing tests in Python and NI Labview for circuit-board validation of my boards at the contract manufacturer.
+  \end{itemize}
+  \medskip
+  
   \textbf{Research Intern} \hfill Keihanna Science City, Kyoto, Japan \\
   \textbf{Advanced Telecommunications Research Institute International} \hfill \emph{July 2012 - August 2013}\smallskip
   \begin{itemize}[nosep]
-%    \item Supported several neuroscience projects related to spatial attention and dream decoding.
-    \item Applied stacked denoising autoencoders to generate hypothetical functional MRI (fMRI) activations.
-    \item Developed stimulus routines to collect data on behavioural tasks from human test subjects.
-    \item Analyzed fMRI, MEG, EEG, and anatomical MRI data to locate and visualize neural activations measured during experiments.
+    \item Implemented a stacked denoising autoencoder in Python to generate hypothetical functional MRI (fMRI) activations.
+    \item Developed stimulus routines in Matlab to collect data on behavioural tasks from human test subjects.
+    \item Analyzed fMRI, MEG, EEG, and anatomical MRI data using Python to locate and visualize neural activations measured during experiments.
+  \end{itemize}
+  \medskip
+
+  \textbf{Projects and Extracurriculars}
+  \begin{itemize}[nosep]
+    \item Implemented a waveform generator in C and Assembler on an ARM microcontroller capable of generating arbitrary waveforms up to 1 MHz.
+    \item Developed firmware and device drivers for LCD display, capacitive-touch, Wi-Fi, and I/O peripherals on an embedded microcontroller demonstration board.
   \end{itemize}
 
 % Education Section
