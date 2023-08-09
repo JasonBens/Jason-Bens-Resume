@@ -12,7 +12,7 @@
 % Boilerplate
 \title{Jason Bens - Resume}
 \author{Jason Bens}
-\date{December 21, 2020}
+\date{January 28, 2022}
 
 % Remove indents - They look silly for this
 \setlength{\parindent}{0pt}
@@ -36,11 +36,10 @@
 % Personal Data
 \newcommand {\firstname} {Jason}
 \newcommand {\lastname} {Bens}
-\newcommand {\address} {390 La Strada Drive, San Jose, CA}
+\newcommand {\address} {Straßburger Straße 9e, Berlin}
 \newcommand {\email} {\url{Jason.L.Bens@gmail.com}}
 \newcommand {\linkedin} {\url{linkedin.com/in/jasonbens}}
 \newcommand {\github} {\url{github.com/JasonBens}}
-\newcommand {\careers} {\url{careers.stackoverflow.com/JasonBens}}
 
 \begin{document}
 
@@ -72,73 +71,79 @@
 \hrulefill
 
 \section{\underline{Biography}}
-I'm a hardware engineer at Loon, previously part of Google X.  I've been designing hardware for the past six years, but I'm also interested in and have experience in software and firmware development.  I'll be relocating with my family to Berlin in April, and intend to take this opportunity to transition into a software-focused position.
+I'm a hardware engineer turned embedded software developer.  While working as an engineer, I designed high-frequency ultrasound devices and stratospheric telecommunications balloons.  I've now moved to the other side of the IO pin, writing firmware to push bits around inside microcontrollers.
 
 % Skill section
 \section{\underline{Skill Summary}}
   \subsection{Languages (Familiar or Proficient)}
-  \begin{tabular}{l l l l}
-    Python & C & C++ & MATLAB \\
-  \end{tabular}
-  \subsection{Other Skills}
-  \begin{tabular}{l l l}
-    Unix & Git & Bash \\
-    Machine Learning & Hardware Design & Embedded Firmware \\
-    RISC Assembler & TI BASIC & \LaTeX
-  \end{tabular}
+  \begin{itemize}[nosep]
+    \item C
+    \item C++ 
+    \item Python
+    \item Stack Overflow
+  \end{itemize}
 
 % Experience section
-\section{\underline{Software Experience}}
-  \textbf{Electrical Engineer}\hfill Seattle, Washington\\
-  \textbf{Pensar Development}\hfill \emph{August 2015 - September 2018}\smallskip
+\section{\underline{Experience}}
+  \textbf{Product Design Consulting Engineer - Hardware/Firmware} \hfill Berlin\\
+  \textbf{Voxdale GmbH}\hfill \emph{October 2022 - July 2023}\smallskip
   \begin{itemize}[nosep]
-    \item Wrote several python utility scripts for firmware updates, log scraping, and reporting on prototype devices under development.
-    \item Developed a suite of automated manufacturing tests in Python and NI Labview for circuit-board validation of my boards at the contract manufacturer.
-  \end{itemize}
-  \medskip
-  
-  \textbf{Research Intern} \hfill Keihanna Science City, Kyoto, Japan \\
-  \textbf{Advanced Telecommunications Research Institute International} \hfill \emph{July 2012 - August 2013}\smallskip
-  \begin{itemize}[nosep]
-    \item Implemented a stacked denoising autoencoder in Python to generate hypothetical functional MRI (fMRI) activations.
-    \item Developed stimulus routines in Matlab to collect data on behavioural tasks from human test subjects.
-    \item Analyzed fMRI, MEG, EEG, and anatomical MRI data using Python to locate and visualize neural activations measured during experiments.
+    \item Conducted a deep refactor of a medical client's existing codebase to increase code clarity and extensibility.
+    \item Acted as technical liason with the sales team, providing technical advice and informed engineering effort estimates during the initial project development period.
+    \item Led the ground-up redesign of an e-mobility client's IoT/telemetry hardware, including requirements specification and project estimation.
   \end{itemize}
   \medskip
 
-  \textbf{Projects and Extracurriculars}
+ \textbf{Embedded Firmware Engineer} \hfill Berlin\\
+  \textbf{Teufel Lautsprecher}\hfill \emph{May 2021 - October 2022}\smallskip
   \begin{itemize}[nosep]
-    \item Implemented a waveform generator in C and Assembler on an ARM microcontroller capable of generating arbitrary waveforms up to 1 MHz.
-    \item Developed firmware and device drivers for LCD display, capacitive-touch, Wi-Fi, and I/O peripherals on an embedded microcontroller demonstration board.
+    \item Developed application code for a currently unreleased Bluetooth LE Audio device to enable synchronous audio streaming between multiple speakers concurrently.
+    \item Dove deep into Qualcomm's Bluetooth SDK to support our headset division's latest product as it approached product release.
+    \item Specified the firmware requirements for the hardware refresh of a successful portable speaker product.
   \end{itemize}
-  
-\section{\underline{Hardware Experience}}
+  \medskip
+
   \textbf{Hardware Engineer}\hfill Mountain View, California\\
-  \textbf{Google X, Loon LLC}\hfill \emph{January 2020 - Current}\smallskip
+  \textbf{Google X, Loon LLC}\hfill \emph{January 2020 - April 2021}\smallskip
   \begin{itemize}[nosep]
-    \item As the main avionics engineer on Loon's next generation of flight vehicle, defined the requirements of, designed, and implemented a new avionics platform, launching Q1 2021 (Phase 1).
+    \item As the main avionics engineer on Loon's next generation of flight vehicle, defined the requirements of, designed, and implemented the avionics hardware loadout for the new flight system
+    \item Represented avionics interests in an interdisciplinary team of hardware, software, firmware, and mechanical engineers.
+    \item Engaged in initial exploratory research and prototyping of a high-altitude wind direction sensor.
     \item Designed from scratch a new sensor fusion board for real-time flight data acquisition and controller actuation, forming the backbone of the next-gen flight vehicle's control system.
     \item Refactored an existing ballast dispenser board to simplify the design, removing or modifying several unnecessary power supplies and peripherals.
     \item Helped keep Loon weird by sneaking cat-themed art onto new circuit boards.
   \end{itemize}
-  \medbreak
-  
+  \medskip
+
   \textbf{Electrical Engineer}\hfill Seattle, Washington\\
   \textbf{Pensar Development}\hfill \emph{August 2015 - September 2018}\smallskip
   \begin{itemize}[nosep]
     \item Designed the schematics and circuit-board layout of several USB 2.0 and USB 3.0 hub boards for a medical ultrasound device.
+    \item Developed a suite of automated manufacturing tests in Python and NI Labview for electrical and functional validation of circuit boards at the contract manufacturer.
+    \item Wrote python utilities for firmware updates, log scraping, and reporting on prototype devices under development.
     \item Spearheaded the EMC effort to reduce the device's RF emissions from 30 dB above the IEC-60601-1 limit to 15 dB below the limit using both electrical and mechanical modifications.
     \item Coordinated with local fabrication labs and larger contract manufacturers to prototype the device and bring it into production.
     \item Performed signal integrity measurements on high speed lines (DDR, USB 3.0, low MHz sine wave) and designed mitigations to reduce the effects of nearby RF coupling.
   \end{itemize}
   \medskip
-  
+
   \textbf{Electrical Engineer}\hfill Mukilteo, Washington\\
   \textbf{Electroimpact}\hfill \emph{September 2014 - August 2015}\smallskip
   \begin{itemize}[nosep]
+    \item Designed the electrical system for a multi-unit wing strut locator jig.  Sensors were used to measure the position and force on {\raise.17ex\hbox{$\scriptstyle\sim$}}100 pneumatic actuators.  A PLC collected this data and determined whether the struts were positioned correctly for the rivet machine.
     \item Designed a sensor system to monitor the safety brakes on a carbon fiber placement gantry used in the construction of the Boeing 747.
     \item Integrated a positional control system with sensors for real-time control of a mobile gantry for carbon fiber placement.
   \end{itemize}
+  \medskip
+
+  \textbf{Research Intern} \hfill Keihanna Science City, Kyoto, Japan \\
+  \textbf{Advanced Telecommunications Research Institute International} \hfill \emph{July 2012 - August 2013}\smallskip
+  \begin{itemize}[nosep]
+    \item Implemented a stacked denoising autoencoder in Python to generate hypothetical functional MRI (fMRI) activations.
+    \item Developed MATLAB programs to run neuroscience experiments, controlling audio and visual stimulus generators and collecting EEG and behavioural data from human test subjects.
+    \item Analyzed fMRI, MEG, EEG, and anatomical MRI data using Python to locate and visualize neural activations measured during experiments.
+  \end{itemize}
+  \medskip
 
 % Education Section
 \section{\underline{Education}}
